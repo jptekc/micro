@@ -92,3 +92,13 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 	mov.w R4, 6(R9)	
 	
 	(f) A[3] = 2*(f - 2*h);
+	
+	mov.w R6, R11
+	add.w R11,R6
+	
+	sub.w R6, R4
+	mov.w R4, R12
+	
+	mov.w R12, R13
+	add.w R13, R12
+	mov.w R12, 6(R9)
