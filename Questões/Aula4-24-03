@@ -72,19 +72,14 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 
 	(a) f *= 2;
 
-	
-
 	mov.w R4, R11
 
 	add.w R11,R4
 
 	mov.w R4, f
 
-	
 
 	(b) g *= 3;
-
-	
 
 	mov.w R5, R11
 
@@ -96,11 +91,7 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 
 	mov.w R5, g
 
-	
-
 	(c) h *= 4;
-
-	
 
 	mov.w R6, R11
 
@@ -116,11 +107,7 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 
 	mov.w R6, h
 
-	
-
 	(d) A[2] = A[1] + A[0];
-
-	
 
 	mov.w 2(R9), R11
 
@@ -129,12 +116,9 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 	add.w R11, R12
 
 	mov.w R12, 4(R9)
-
 	
 
 	(e) A[3] = 2*f - 4*h;
-
-	
 
 	mov.w R4, R11
 
@@ -142,7 +126,6 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 
 	mov.w R4, f
 
-	
 
 	mov.w R6, R12
 
@@ -158,29 +141,23 @@ Utilize os registradores R11, R12, R13, R14 e R15 para armazenar valores tempor√
 
 	mov.w R6, h
 
-	
 
 	sub.w R6, R4
 
 	mov.w R4, 6(R9)	
 
 	
-
 	(f) A[3] = 2*(f - 2*h);
-
-	
 
 	mov.w R6, R11
 
 	add.w R11,R6
 
-	
 
 	sub.w R6, R4
 
 	mov.w R4, R12
 
-	
 
 	mov.w R12, R13
 
