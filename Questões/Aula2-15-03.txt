@@ -1,19 +1,35 @@
 Data: 15/03/2017
 
-Q1. Quais as diferenÁas entre os barramentos de dados e de endereÁos?
-Barramento de dados È o quanto o computador cosegue processar dados e a de endereÁos o quanto ele consegue armazenar
+Q1. Quais as diferen√ßas entre os barramentos de dados e de endere√ßos?
 
-Q2. Quais s„o as diferenÁas entre as memÛrias RAM e ROM?
-As memorias RAM possuem leitura aleatoria, assim pode acessar varios locais da memoria em tempos diferentes
-As memorias ROM nao possuem escrita, somente leitura e sao muito mais lentas que as memorias RAM
+Resposta: Barramento de dados √© o quanto o computador cosegue processar dados e a de endere√ßos o 
+          quanto o processador consegue armazenar.
+	  
+	  BARRAMENTO DE ENDERE√áO: determina a capacidade m√°xima de posi√ß√µes de mem√≥ria acess√≠veis. Est√°
+	  relacionado a leitura que o processsador realiza na mem√≥ria.
+	  
+	  BARRAMENTO DE DADOS: √© respons√°vel pelo transporte da instru√ß√£o, vari√°vel do processamento ou informa√ß√£o
+	  de um perif√©rico E/S. O tamanho desse barramento determina o n√∫mero de instru√ß√µes que o processador pode
+	  executar.
 
-Q3. Considere o cÛdigo abaixo, de 12 linhas:
+Q2. Quais s√£o as diferen√ßas entre as mem√≥rias RAM e ROM?
+Resposta: As memorias RAM possuem leitura aleatoria, assim pode acessar varios locais da memoria em tempos diferentes.
+          As memorias ROM nao possuem escrita, somente leitura e sao muito mais lentas que as memorias RAM.
+	  
+	  RAM: √© uma mem√≥ria volatil que serve para armazenar dados que vao ser acessados quando o sistema ja esta em 
+	  funcionamento. Quando o sistemas e desconectado da energia, tudo que estava guardado na RAM e apagado. Ela 
+	  pode ser acessada a qualquer momento pelo sistema.
+	  
+	  ROM: sao memorias que serverm somente para leitura, geralmente sao usdadas para guardar informacoes importantes
+	  que sao indispensaveis pelo sistema.
+ ¬† ¬† ¬† ¬†  
+Q3. Considere o c√≥digo abaixo, de 12 linhas:
 
     1.   #include <stdio.h>
     2.   int main(void)
     3.   {
     4.      int i;
-    5.      printf("Insira um n˙mero inteiro: ");
+    5.      printf("Insira um n√∫mero inteiro: ");
     6.      scanf("%d", &i);
     7.      if(i%2)
     8.         printf("%d eh impar.\n");
@@ -22,19 +38,34 @@ Q3. Considere o cÛdigo abaixo, de 12 linhas:
    11.      return 0;
    12.   }
 
-Para este cÛdigo, responda:
-	(a) A vari·vel 'i' È armazenada na memÛria RAM ou ROM? Por quÍ?
-	'i' È armazenada na memoria RAM, porque È um dado temporario, depois que foi lido n„o È mais importante para a memoria	
+Para este c√≥digo, responda:
+	(a) A vari√°vel 'i' √© armazenada na mem√≥ria RAM ou ROM? Por qu√™?
+	
+	Resposta: 'i' √© armazenada na memoria RAM, porque √© um dado temporario, depois que foi lido n√£o √© mais importante para
+	          a memoria	
 
-	(b) O programa compilado a partir deste cÛdigo È armazenado na memÛria RAM ou ROM? Por quÍ?
-	ser· armazenado na memoria RAM, porque o programa escreve e depois lÍ o dado
+	(b) O programa compilado a partir deste c√≥digo √© armazenado na mem√≥ria RAM ou ROM? Por qu√™?
+	
+	Resposta: ser√° armazenado na memoria RAM, porque o programa escreve e depois l√™ o dado.
 
-Q4. Quais s„o as diferenÁas, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
-A principal diferenÁa È a velocidade, pois na Von Neuman precisa-se acessar a memÛria RAM e Rom de cada vez. Por outro lado, a Havard precisa tem Acesso simultaneo as duas.
+Q4. Quais s√£o as diferen√ßas, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
 
-
-Q5. Considere a vari·vel inteira 'i', armazenando o valor 0x8051ABCD. Se 'i' È armazenada na memÛria a partir do endereÁo 0x0200, como ficam este byte e os seguintes, considerando que a memÛria È:
+Resposta: A arquiterura de Harvard e muito mais rapida que a arquiterura de Von Neumann, pois consegue acessar duas memorias
+          simultaneamente enquanto que na de Von Neumann os dados lidos e armazenados no mesmo local.
+	  
+Q5. Considere a vari√°vel inteira 'i', armazenando o valor 0x8051ABCD. Se 'i' √© armazenada na mem√≥ria a partir do endere√ßo 0x0200, como ficam este byte e os seguintes, considerando que a mem√≥ria √©:
 	(a) Little-endian?
+	
+	Resposta: 0x 0  2  0  0
+	             80 51 AB CD
+	
 	(b) Big-endian?
+	
+	Resposta: 0x 0  2  0  0
+	             CD AB 51 80
 
-Q6. Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas vari·veis de 32 bits?
+Q6. Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas vari√°veis de 32 bits?
+
+Resposta: O processador do MSP430 divide uma palavra de 32 bits (sem sinal) em duas palavras de 16 bits e assim soma
+          com mais duas palavras de 16 bits. Logo o MSP430 soma quatro palavras de 16 bits para fornecer uma palavra
+	  de 32 bits.
