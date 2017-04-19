@@ -1,22 +1,42 @@
--o que s�o sistemas embarcados?
-sistemas que possuem hardware e software dedicado para uma determinada fun��o.
+Data: 08/03/2017
 
--o que s�o sistemas microprocessados?
-sistemas que posssuem um microprocessador para executar suas fun��es.
+1. O que são sistemas embarcados?
 
--apresente aplica��es de sistemas embarcados:
-   -para industria automotiva;
-   controle de estabiliza��o.
+Resposta: Sistemas embarcados são basicamente computadores em um único chip. São sistemas que integram
+          hardware e software no mesmo chip. Estes chips geralmente são feitos sob medida para determinadas
+          aplicaçes.
 
-   -para industria eletrodomestica;
-   controle de temperatura.
+2. O que são sistemas microprocesssados?
 
-   -para automa��o industrial.
-   controle da linha de produ��o.
+Resposta: São sistemas em que o computador é completamente encapsulado, ou dedicado, ao dispositivo ou ao
+          sistema onde será aplicado.
 
--cite arquiteturas possiveis e as diferen�as entre elas.
-arquitetura de Van Neumann e de Harvard
-a principal diferen�a entre essas arquiteruras � qie a de Harvard permite a leitura simultanea de dados e de programa.
 
--por que usamos o MPS430 na disciplina, ao inves de outro microcontrolador?
-porque � um microcontrolador mais simples e de f�cil aprendizagem.
+3. Apresente aplicações de sistemas embarcados:
+	(a) Para a indústria automotiva;
+   
+   Resposta: Controle de estabilização, ar condicionado, airbags, transmissão. 
+   
+	(b) Para eletrodomésticos;
+   
+   Resposta: Cafeteira, torradeira, máquina de lavar roupas e louças, filtros de água, geladeira.
+   
+  
+	(c) Para automação industrial.
+   
+   Resposta: Esteira de linha de produção, braços mecânicos, controle de temperatura.
+
+4. Cite arquiteturas possíveis e as diferenças entre elas.
+
+Resposta: Há dois tipos de arquiteturas possíveis:
+          
+          ARQUITETURA DE VON NEUMANN: caracterizada pela possibilidade de uma máquina digital armazenar seus programas
+          no mesmo espaço de memória que os dados, podendo assim manipular tais programas.
+          
+          ARQUITETURA DE HARVARD: possui duas memórias diferentes e independentes em termos de barramento e ligação ao 
+          processador. Assim o processador pode acessar duas memórias simultaneamente.
+
+5. Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
+
+Resposta: O MSP430 é um microcontrolador de baixo custo que possui fácil aprendizagem por utilizar também linguagem C
+          e Assembly.
