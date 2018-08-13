@@ -1,0 +1,145 @@
+Data: 22/03/2017
+
+1. Dada uma variável 'a' do tipo 'char' (um byte), escreva os trechos de código em C para:
+	(a) Somente setar o bit menos significativo de 'a'.
+	Resposta: char = 1 byte = 8 bits
+	
+	          x = 0b0000 0001 //mascara 
+
+	          a |= 0x01;
+		  
+		  int x = 0x01;
+		  int a = 0xXX;
+		  int c = a | x; //operador OR
+
+	(b) Somente setar dois bits de 'a': o menos significativo e o segundo menos significativo.
+	
+	Resposta: a |= 0x03;
+	          
+		  x = 0b0000 0011 //mascara
+		  
+		  int x = 0x03;
+		  int a = 0xXX;
+		  int c = a | x;
+
+	(c) Somente zerar o terceiro bit menos significativo de 'a'.
+	
+	Resposta: a &= 0xFB;
+	          
+		  x = 0b1111 1011 //mascara
+		  
+		  int x = 0x03;
+		  int a = 0xXX;
+		  int c = a & x; //operador AND
+		  
+
+	(d) Somente zerar o terceiro e o quarto bits menos significativo de 'a'.
+
+	Resposta: a &= 0xF3;
+	          
+		  int x = 0xF3;
+		  int a = 0xXX;
+		  int c = a & x;
+
+	(e) Somente inverter o bit mais significativo de 'a'.
+
+	Resposta: a ^= 0x80;
+	          
+		  int a;
+		  int c = ^a;
+
+	(f) Inverter o nibble mais significativo de 'a', e setar o nibble menos significativo de 'a'. 
+	
+	Resposta: nibble = 4 bits
+	
+	          int x = 0xF0;
+		  int a = 0xXX;
+		  int c = !(a & x);
+	          
+
+2. Considerando a placa Launchpad do MSP430, escreva o código em C para piscar os dois LEDs ininterruptamente.
+
+Resposta: #include <msp430g2553.h>
+          void main(void){
+	  WDTCTL = WDTPW | WDTHOLD;
+	  P1DIR = bit0 + bit6;
+	  P1OUT = 0;
+	  while(1);
+	  }
+
+3. Considerando a placa Launchpad do MSP430, escreva o código em C para piscar duas vezes os dois LEDs sempre que o usuário pressionar o botão.
+
+Resposta: #include <msp430g2553.h>
+          #define BTN bit2; //botao
+	  #define LED1 bit0;
+	  #define LED2 bit6;
+	  
+	  void main (void){
+	  WDTCTL = WDTPW | WDTHOLD;
+	  P1OUT = 0; //leds começam desligados
+	  P1DIR = LED1 + LED2;
+	  for (;;){
+	           while ((P1IN & BTN) != 0){}
+		   P1OUT |= LED1 + LED2; //enquanto nao pressionar o botao, nao ascende
+		   P1OUT = 0;
+		   P1OUT |= LED1 + LED2; 
+		   P1OUT = 0;
+		   
+		   while ((P1IN & BTN) == 0){}
+		   P1OUT &= ˜(LED1 + LED2);}
+           }
+
+4. Considerando a placa Launchpad do MSP430, faça uma função em C que pisca os dois LEDs uma vez.
+
+Resposta: #include <msp430g2553.h>
+          #define BTN bit2; //botao
+	  #define LED1 bit0;
+	  #define LED2 bit6;
+	  
+	  void main (void){
+	  WDTCTL = WDTPW | WDTHOLD;
+	  P1OUT = 0; //leds começam desligados
+	  P1DIR = LED1 + LED2;
+	  
+	  do {if (P1IN & BTN) == 0}
+	  P1OUT = LED1 + LED2;
+	  While(0)
+	  }
+
+
+5. Reescreva o código da questão 2 usando a função da questão 4.
+
+Resposta: #include <msp430g2553.h>
+          #define BTN bit2; //botao
+	  #define LED1 bit0;
+	  #define LED2 bit6;
+	  
+	  void main (void){
+	  WDTCTL = WDTPW | WDTHOLD;
+	  P1OUT = 0; //leds começam desligados
+	  P1DIR = LED1 + LED2;
+	  
+	  do {if (P1IN & BTN) == 0}
+	  P1OUT = LED1 + LED2;
+	  While(1)
+	  }
+
+
+
+6. Reescreva o código da questão 3 usando a função da questão 4.
+
+Resposta: #include <msp430g2553.h>
+          #define BTN bit2; //botao
+	  #define LED1 bit0;
+	  #define LED2 bit6;
+	  
+	  void main (void){
+	  WDTCTL = WDTPW | WDTHOLD;
+	  P1OUT = 0; //leds começam desligados
+	  P1DIR = LED1 + LED2;
+	  
+	  do {if (P1IN & BTN) != 0}
+	  P1OUT |= LED1 + LED2;
+	  While(0)
+	  }
+

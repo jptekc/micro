@@ -1,0 +1,42 @@
+Data: 08/03/2017
+
+1. O que são sistemas embarcados?
+
+Resposta: Sistemas embarcados são basicamente computadores em um único chip. São sistemas que integram
+          hardware e software no mesmo chip. Estes chips geralmente são feitos sob medida para determinadas
+          aplicaçes.
+
+2. O que são sistemas microprocesssados?
+
+Resposta: São sistemas em que o computador é completamente encapsulado, ou dedicado, ao dispositivo ou ao
+          sistema onde será aplicado.
+
+
+3. Apresente aplicações de sistemas embarcados:
+	(a) Para a indústria automotiva;
+   
+   Resposta: Controle de estabilização, ar condicionado, airbags, transmissão. 
+   
+	(b) Para eletrodomésticos;
+   
+   Resposta: Cafeteira, torradeira, máquina de lavar roupas e louças, filtros de água, geladeira.
+   
+  
+	(c) Para automação industrial.
+   
+   Resposta: Esteira de linha de produção, braços mecânicos, controle de temperatura.
+
+4. Cite arquiteturas possíveis e as diferenças entre elas.
+
+Resposta: Há dois tipos de arquiteturas possíveis:
+          
+          ARQUITETURA DE VON NEUMANN: caracterizada pela possibilidade de uma máquina digital armazenar seus programas
+          no mesmo espaço de memória que os dados, podendo assim manipular tais programas.
+          
+          ARQUITETURA DE HARVARD: possui duas memórias diferentes e independentes em termos de barramento e ligação ao 
+          processador. Assim o processador pode acessar duas memórias simultaneamente.
+
+5. Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
+
+Resposta: O MSP430 é um microcontrolador de baixo custo que possui fácil aprendizagem por utilizar também linguagem C
+          e Assembly.

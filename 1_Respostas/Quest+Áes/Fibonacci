@@ -1,0 +1,15 @@
+Sequencia de Fibonacci
+
+FIBONACCI: clr 0(R15)
+           mov #1, 2(R15)
+           mov #2, R13
+FOR_FIBO: cmp R14, R13 // i>=0
+          jge FOR_FIBO_END
+          mov R13, R12 //R12 = A + 2(i -2)
+          sub #2, R12
+          rla R12
+          add R15, R12
+          mov 0(R12), 4(R12)
+          inc R13
+          jmp FOR_FIBO
+FOR_FIBO_END
