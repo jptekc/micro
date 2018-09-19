@@ -1,0 +1,42 @@
+Questão 1.b
+
+em C:
+
+int vecto_dec (int x[], int N)
+{ int i;
+  for (i=0; i<(N-1); i++)
+   if (x[i]<x[i+1])
+   {
+    return 0;
+   }
+  }
+ return 1;
+}
+
+em Assembly:
+
+vector_dec: push R4 %guarda i
+            clr R4 %i=0
+            mov R14, R13
+ 	    dec R13
+vector_dec_for cmp R13, R4
+               jge vector_dec_end
+ 	       cmp 2(R15), 0(R15)
+ 	       pop R4
+               clr R15
+               ret
+vector_dec_imc:
+	inc R4
+	incd R15
+	jmp vector_dec_for
+vector_dec_end:
+	pop R4
+	mov #1, R15
+	ret 
+
+Questao 10
+
+int palindromo (int vetor[], int tamanho)
+	{
+		int i; k=tamanho-1;
+			
